@@ -1,0 +1,18 @@
+.thumbnail img{
+  
+  width:100%;
+  max-width:800px;
+  max-height:600px;
+}
+
+.thumbnail{
+  padding:0;
+}
+
+.thumbnail .caption-full {
+  padding:9px;
+}
+
+#delete-form{
+  display:inline;
+}
