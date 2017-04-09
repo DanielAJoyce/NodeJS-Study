@@ -17,13 +17,14 @@ var express           = require("express"),
     indexRoutes       = require("./routes/index");
     
     
-    
-mongoose.connect("mongodb://aperson:lolol@ds131510.mlab.com:31510/yelpcamp");
-//mongodb://<dbuser>:<dbpassword>@ds131510.mlab.com:31510/yelpcamp
+mongoose.connect(process.env.DATABASEURL);
+//mongoose.connect("mongodb://aperson:lolol@ds131510.mlab.com:31510/yelpcamp");
+//mongoose.connect("mongodb://localhost/yelp_camp");
+
+
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public")); // origin of the project (safe way to do it)
-console.log(__dirname);
 app.use(methodOverride("_method"));
 app.use(flash());
 // seedDB(); // Seed the database.
