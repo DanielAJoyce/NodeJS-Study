@@ -16,8 +16,9 @@ var express           = require("express"),
     campgroundRoutes  = require("./routes/campgrounds"),
     indexRoutes       = require("./routes/index");
     
-    
-mongoose.connect(process.env.DATABASEURL); // set elsewhere. Changed Heroku to its own env var for production
+var url = process.env.DATABASEURL || "mongod://localhost/yelp_camp";
+
+mongoose.connect(url); // set elsewhere. Changed Heroku to its own env var for production
 
 
 app.set("view engine","ejs");
