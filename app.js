@@ -17,9 +17,7 @@ var express           = require("express"),
     indexRoutes       = require("./routes/index");
     
     
-mongoose.connect(process.env.DATABASEURL);
-//mongoose.connect("mongodb://aperson:lolol@ds131510.mlab.com:31510/yelpcamp");
-//mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect(process.env.DATABASEURL); // set elsewhere. Changed Heroku to its own env var for production
 
 
 app.set("view engine","ejs");
