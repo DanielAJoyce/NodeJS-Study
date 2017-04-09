@@ -18,7 +18,8 @@ var express           = require("express"),
     
     
     
-mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://aperson:lolol@ds131510.mlab.com:31510/yelpcamp");
+//mongodb://<dbuser>:<dbpassword>@ds131510.mlab.com:31510/yelpcamp
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public")); // origin of the project (safe way to do it)
